@@ -36,11 +36,15 @@ class We_Post_View_Counter{
         //asssets Hook
         add_action('wp_enqueue_scripts', [$this, 'frontend_scripts']);
 
+
         //Manage Column Hook
         add_filter('manage_posts_columns', [$this, 'admin_view_count_column']);
         add_action('manage_posts_custom_column', [$this, 'display_admin_view_count_column'], 10, 2);
 
+        add_filter('manage_edit-post_sortable_columns', [$this, 'add_sortable_column']);
+
         add_action('wp_head', [$this, 'post_view_count']);
+        
         
         //Render Shortcode
         add_shortcode('post_view_shortcode', [$this, 'post_view_display_shortcode']);
@@ -105,6 +109,18 @@ class We_Post_View_Counter{
     public function admin_view_count_column($column){
         $column['view_count'] = 'View Count';
         return $column;
+    }
+
+    /**
+     * Post View Column Title
+     *
+     * @param [type] $column
+     * @return void
+     */
+    public function add_sortable_column($columns){
+        $columns['id'] = 'ID';
+        $columns['view_count'] = 'View Count';
+        return $columns;
     }
 
     /**
