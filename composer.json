@@ -1,0 +1,18 @@
+{
+    "name": "raziul/post-view-counter",
+    "description": "post view counter plugin",
+    "type": "wordpress-plugin",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {
+            "Raziul\\PostViewCounter\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raziul"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

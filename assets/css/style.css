@@ -1,0 +1,19 @@
+.viewcounter--wrapr {
+    box-shadow: 0 0 41px #00000012;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.viewcounter--wrapr h1, .viewcounter--wrapr h3 {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.viewcounter--wrapr span {
+    font-size: 50px;
+    font-weight: 500;
+    margin-top: 25px;
+}
